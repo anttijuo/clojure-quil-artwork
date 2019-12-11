@@ -35,7 +35,10 @@
 
 (defn draw-state [state]
   (q/clear)
-  (skull (/ (q/width) 2) (/ (q/height) 2) state))
+  (cond
+    (q/key-pressed?) (skull (/ (q/width) 2) (/ (q/height) 2) state)
+    )
+)
 
 (q/defsketch skulls
   :host "skulls"
